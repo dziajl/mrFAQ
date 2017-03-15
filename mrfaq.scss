@@ -1,0 +1,56 @@
+.modulartext-wrapper {
+    /*border: solid 1px;*/
+    padding-right: 1rem;
+    @include transition(background-color 0.3s ease);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    &.expanded {
+        background-color: $white;
+    }
+
+    .number-wrapper {
+        float: left;
+        width: 55px;
+        margin-left: 4.5%;
+        margin-right: 1.5%;
+        .number {
+            color: $altColor;
+            margin-top: 0;
+            margin-bottom: 0;
+            span {
+                color: inherit;
+            }
+        }
+    } 
+
+    .modular-content-wrapper {
+        float: left;
+        width: calc(94% - 55px);
+
+        .collapsed-text-content {
+            float: left;
+        }
+    }
+
+
+    .collapse-toggler {
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+
+        h3 {
+            @include transition(color 0.3s ease);
+            margin-top: 0;
+            margin-bottom: 0;          
+        }
+    }
+
+    .collapse-toggler {
+        &:hover {
+            h3 {
+                color: $altColor;
+            }
+        }
+    }
+}
